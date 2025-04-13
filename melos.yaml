@@ -1,0 +1,9 @@
+name: flutter_packages
+
+packages: 
+  - packages/**
+  - appsmelos bootstrap/**
+
+scripts:
+  generate:
+    run: melos exec -c 1 --depends-on build_runner -- dart run build_runner build

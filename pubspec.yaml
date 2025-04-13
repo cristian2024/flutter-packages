@@ -1,0 +1,9 @@
+name: flutter_packages
+publish_to: none
+environment:
+  sdk: ^3.6.0
+dev_dependencies:
+  melos: ^6.3.2
+
+workspace:
+  # agregar todos los workspaces
