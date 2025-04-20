@@ -1,1 +1,154 @@
-.DS_Store
+# File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
+# Created by https://www.toptal.com/developers/gitignore/api/flutter
+# Edit at https://www.toptal.com/developers/gitignore?templates=flutter
+
+### Flutter ###
+# Flutter/Dart/Pub related
+**/doc/api/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.fvm/flutter_sdk
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+lib/generated_plugin_registrant.dart
+# For library packages, don’t commit the pubspec.lock file.
+# Regenerating the pubspec.lock file lets you test your package against the latest compatible versions of its dependencies.
+# See https://dart.dev/guides/libraries/private-files#pubspeclock
+#pubspec.lock
+
+# Android related
+**/android/**/gradle-wrapper.jar
+**/android/.gradle
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/key.properties
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+
+# iOS/XCode related
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbxuser
+**/ios/**/*.perspectivev3
+**/ios/**/*sync/
+**/ios/**/.sconsign.dblite
+**/ios/**/.tags*
+**/ios/**/.vagrant/
+**/ios/**/DerivedData/
+**/ios/**/Icon?
+**/ios/**/Pods/
+**/ios/**/.symlinks/
+**/ios/**/profile
+**/ios/**/xcuserdata
+**/ios/.generated/
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/Flutter/flutter_assets/
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+
+# Exceptions to above rules.
+!**/ios/**/default.mode1v3
+!**/ios/**/default.mode2v3
+!**/ios/**/default.pbxuser
+!**/ios/**/default.perspectivev3
+!/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+
+# End of https://www.toptal.com/developers/gitignore/api/flutter
+
+# Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
+
+# Dart & Flutter tool stuff
+.dart_tool/
+.packages
+.pub-cache/
+.buildlog/
+.melos_tool/
+.melos_tool_tmp/
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-versions
+pubspec.lock
+
+# Melos
+melos_managed/
+
+# Build outputs (in all projects)
+**/build/
+**/pubspec.lock
+
+# IDE config folders (in all projects)
+**/.vscode/
+**/.idea/
+*.iml
+
+# Platform-specific artifacts
+**/ios/Flutter/
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Runner.xcworkspace/
+**/ios/Flutter/Flutter.podspec
+**/macos/Flutter/
+**/macos/Pods/
+**/macos/.symlinks/
+**/android/.gradle/
+**/android/build/
+**/android/app/build/
+**/android/local.properties
+**/windows/build/
+**/windows/Flutter/
+**/linux/build/
+**/linux/Flutter/
+**/web/build/
+
+# Fastlane
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots/**/*.png
+**/fastlane/test_output/
+
+# Coverage
+**/coverage/
+**/*.lcov
+
+# Misc
+**/*.log
+**/*.tmp
+**/.DS_Store
+**/.env
+**/.env.*
+**/.packages
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+
+# Executables and binary stuff
+**/*.exe
+**/*.dll
+**/*.so
+**/*.dylib
+**/*.class
+**/*.jar
+**/*.pyc
+**/*.pyo
+**/*.swp
+**/*.lock
+
+# IDE project files
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+
+# Keep the .gitignore itself tracked
+!.gitignore
