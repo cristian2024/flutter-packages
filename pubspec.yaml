@@ -6,5 +6,5 @@ dev_dependencies:
   melos: ^6.3.2
 
 workspace:
-  - packages/state_management
+  - flutter_packages/state_management
   - packages/core
