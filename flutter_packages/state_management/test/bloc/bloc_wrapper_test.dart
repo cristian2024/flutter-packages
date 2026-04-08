@@ -5,7 +5,7 @@ import 'package:mocktail/mocktail.dart';
 import 'package:state_management/bloc/bloc_wrapper.dart' show BlocWrapper;
 
 class CounterCubit extends Cubit<int> {
-  CounterCubit([int initialState = 0]) : super(initialState);
+  CounterCubit([super.initialState = 0]);
 
   void increment() => emit(state + 1);
 }

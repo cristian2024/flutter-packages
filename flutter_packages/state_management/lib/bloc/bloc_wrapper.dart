@@ -63,6 +63,8 @@ class BlocWrapper<B extends BlocBase<S>, S> extends StatelessWidget {
   /// Controls when the builder is called based on previous and current state.
   final BlocBuilderCondition<S>? buildWhen;
 
+  final bool lazy;
+
   /// Creates a [BlocWrapper].
   ///
   /// Requires either [bloc] or [create], and either [builder] or [child].
@@ -75,10 +77,8 @@ class BlocWrapper<B extends BlocBase<S>, S> extends StatelessWidget {
     this.listener,
     this.listenWhen,
     this.buildWhen,
-  }) : assert(
-         bloc != null || create != null,
-         'Either provide bloc or create factory.',
-       ),
+    this.lazy = false,
+  }) : 
        assert(
          builder != null || child != null,
          'Either provide builder or child.',
@@ -92,7 +92,7 @@ class BlocWrapper<B extends BlocBase<S>, S> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget? internChild;
+    Widget? internChild = child;
 
     if (listener != null && builder != null) {
       internChild = BlocConsumer<B, S>(
@@ -118,7 +118,11 @@ class BlocWrapper<B extends BlocBase<S>, S> extends StatelessWidget {
     }
 
     if (bloc == null && create != null) {
-      return BlocProvider<B>(create: (_) => create!.call(), child: internChild);
+      return BlocProvider<B>(
+        create: (_) => create!.call(),
+        lazy: lazy,
+        child: internChild,
+      );
     }
 
     return internChild ?? const SizedBox.shrink();

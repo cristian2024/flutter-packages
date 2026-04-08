@@ -7,4 +7,5 @@ dev_dependencies:
 
 workspace:
   - flutter_packages/state_management
+  - flutter_packages/ui_kit
   - packages/core
